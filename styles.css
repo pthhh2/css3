@@ -1,0 +1,156 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.outline {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    order: -1; /* Letakkan outline di atas pada mobile */
+}
+
+.outline h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.outline ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.outline li {
+    margin-bottom: 0;
+}
+
+.outline a {
+    text-decoration: none;
+    color: #3498db;
+    transition: color 0.3s;
+    display: block;
+    padding: 5px 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.outline a:hover {
+    color: #2980b9;
+    background: #e9ecef;
+}
+
+.article-content {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+article section {
+    margin-bottom: 40px;
+    scroll-margin-top: 20px;
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+h3 {
+    color: #34495e;
+    margin: 20px 0 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+strong {
+    color: #2c3e50;
+}
+
+/* Tablet: 800-1000px - outline di kanan */
+@media (min-width: 800px) {
+    .container {
+        flex-direction: row;
+    }
+    
+    .outline {
+        width: 200px;
+        position: sticky;
+        top: 20px;
+        align-self: flex-start;
+        order: 2; /* Letakkan outline di kanan */
+    }
+    
+    .outline ul {
+        display: block;
+    }
+    
+    .outline li {
+        margin-bottom: 10px;
+    }
+    
+    .outline a {
+        background: none;
+        padding: 5px 0;
+    }
+}
+
+/* Desktop: >1000px - outline di kiri */
+@media (min-width: 1000px) {
+    .container {
+        flex-direction: row;
+    }
+    
+    .outline {
+        width: 250px;
+        order: -1; /* Letakkan outline di kiri */
+    }
+}
+
+/* Tambahan untuk layar sangat lebar */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1400px;
+    }
+    
+    .outline {
+        width: 280px;
+    }
+}
